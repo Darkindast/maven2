@@ -4,6 +4,8 @@
 
 package mephi.b22901.aa.maven_3;
 
+import javax.swing.SwingUtilities;
+
 /**
  *
  * @author Andrey
@@ -11,6 +13,10 @@ package mephi.b22901.aa.maven_3;
 public class Maven_3 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        SwingUtilities.invokeLater(() -> {
+            View view = new View();
+            new Controller(view);
+            view.setVisible(true);
+        });
     }
 }
